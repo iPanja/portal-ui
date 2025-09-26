@@ -30,7 +30,7 @@ export default function Home() {
 				<Button className="p-8" onClick={() => console.log('yippe')}>
 					HEY OVER HERE
 				</Button>
-				<h3 className="px-12 text-green-500">YO YO YO YO </h3>
+				<h3 className="px-12 rt-text-green-500">YO YO YO YO </h3>
 			</main>
 		</div>
 	);

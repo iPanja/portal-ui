@@ -3,8 +3,6 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@react-ui/lib/utils";
 
-import "../../test.css";
-
 const buttonVariants = cva(
   "rt-inline-flex rt-items-center rt-justify-center rt-whitespace-nowrap rt-rounded-md rt-text-sm rt-font-medium rt-transition-colors focus-visible:rt-outline-none focus-visible:rt-ring-1 focus-visible:rt-ring-ring disabled:rt-pointer-events-none disabled:rt-opacity-50 rt-bg-green-500 rt-text-purple rt-px-4 py-2",
   {
