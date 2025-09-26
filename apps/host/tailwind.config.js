@@ -1,26 +1,22 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-const { fontFamily } = require('tailwindcss/defaultTheme');
-import sharedConfig from "shared-ui/tailwind.config.mjs"
+const { shadcnPreset } = require('shadcn-ui'); // or the correct preset from your library
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	prefix: 'rt-', // keep your existing prefix
 	darkMode: ['class'],
-	prefix: 'rt-',
-    presets: [sharedConfig],
 	content: [
-		'src/**/*.{ts,tsx,js,jsx,mdx}',
-		'index.html',
-        '../../packages/ui/src/**/*.{ts,tsx}'
+		'./src/**/*.{js,ts,jsx,tsx}',
+		'../../packages/react-ui/src/**/*.{js,ts,jsx,tsx}', // include the shared library
 	],
-	theme: {
-		container: {
-			center: true,
-			padding: '2rem',
-			screens: {
-				'2xl': '1400px',
-			},
+	safelist: [
+		{
+			pattern: /^rt-/,
 		},
+	],
+	presets: [shadcnPreset],
+	theme: {
 		extend: {
+			// keep your custom theme here
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

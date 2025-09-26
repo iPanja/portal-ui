@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { Button } from 'shared-ui';
+// import { Button } from '@repo/react-ui/components/ui/button';
+import { Button } from '@repo/react-ui';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -26,12 +27,10 @@ export default function Home() {
 					height={38}
 					priority
 				/>
-				<Button
-					className="dark:invert"
-					onClick={() => console.log('yippe')}
-				>
+				<Button className="p-8" onClick={() => console.log('yippe')}>
 					HEY OVER HERE
 				</Button>
+				<h3 className="px-12 text-green-500">YO YO YO YO </h3>
 			</main>
 		</div>
 	);

@@ -1,12 +1,12 @@
 import { NextFederationPlugin } from '@module-federation/nextjs-mf';
 import type { NextConfig } from 'next';
 
-const isProd = process.env.NODE_ENV === 'production';
+// const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
 	/* config options here */
 	reactStrictMode: true,
-	webpack(config, options) {
+	webpack(config, _) {
 		config.plugins.push(
 			// https://module-federation.io/guide/framework/nextjs
 			new NextFederationPlugin({
@@ -26,6 +26,7 @@ const nextConfig: NextConfig = {
 		);
 		return config;
 	},
+	transpilePackages: ['@react-ui/lib'],
 };
 
 export default nextConfig;

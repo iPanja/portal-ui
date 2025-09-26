@@ -11,23 +11,30 @@
 	},
 	"dependencies": {
 		"@module-federation/nextjs-mf": "^8.8.41",
+		"@radix-ui/react-slot": "^1.2.3",
+		"@radix-ui/themes": "^3.2.1",
+		"@tailwindcss/cli": "^4.1.13",
 		"next": "15.5.4",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
-		"shared-ui": "workspace:*"
+		"shadcn-ui": "^0.9.5",
+		"tailwind-variants": "^3.1.1"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
-		"@tailwindcss/postcss": "^4",
+		"@repo/ts-config": "workspace:*",
+		"@tailwindcss/postcss": "^4.1.13",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"autoprefixer": "^10.4.21",
 		"eslint": "^9",
 		"eslint-config-next": "15.5.4",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-prettier": "^5.5.4",
+		"postcss": "^8.5.6",
 		"prettier": "^3.6.2",
-		"tailwindcss": "^4",
+		"tailwindcss": "^4.1.13",
 		"typescript": "^5"
 	}
 }

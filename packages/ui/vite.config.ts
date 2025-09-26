@@ -1,1 +1,0 @@
-// Just to satisfy `npx shadcn@latest add <component>`
