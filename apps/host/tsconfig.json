@@ -31,6 +31,6 @@
 		"next-env.d.ts",
 		"next.config.js",
 		".next/types/**/*.ts"
-	],
+, "../../packages/ui/src/components/ui/typography.tsx"	],
 	"exclude": ["node_modules"]
 }

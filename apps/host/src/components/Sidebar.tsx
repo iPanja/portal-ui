@@ -12,16 +12,20 @@ import {
   Calendar,
   ChevronLeft,
   ChevronRight,
+  Bot,
+  ExternalLink,
 } from 'lucide-react';
 
 // Navigation items configuration
 const navigationItems = [
   { icon: Home, label: 'Dashboard', href: '/' },
-  { icon: Users, label: 'Team', href: '/team' },
-  { icon: FileText, label: 'Documents', href: '/documents' },
+  { icon: Bot, label: 'Chat Interface', href: '/chat'},
+//   { icon: Users, label: 'Team', href: '/team' },
+//   { icon: FileText, label: 'Documents', href: '/documents' },
   { icon: BarChart3, label: 'Analytics', href: '/analytics' },
-  { icon: Mail, label: 'Messages', href: '/messages' },
-  { icon: Calendar, label: 'Calendar', href: '/calendar' },
+  { icon: ExternalLink, label: 'Links', href: '/links'},
+//   { icon: Mail, label: 'Messages', href: '/messages' },
+//   { icon: Calendar, label: 'Calendar', href: '/calendar' },
   { icon: Settings, label: 'Settings', href: '/settings' }
 ];
 

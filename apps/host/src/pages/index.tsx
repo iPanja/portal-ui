@@ -7,6 +7,7 @@ import {
 	AlertTitle,
 } from '@repo/ui/components/ui/alert';
 import React, { useState} from 'react';
+import { TypographyH1 } from '@repo/ui/components/ui/typography'
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -23,27 +24,18 @@ export default function Home() {
 
     return (
         <main className="flex flex-col gap-[32px] items-center sm:items-start">
+            <TypographyH1>Acme Inc - Chat Portal</TypographyH1>
+
             <Alert variant="default">
                 <AlertTitle>Dashboard</AlertTitle>
                 <AlertDescription>
-                Welcome to your dashboard! The sidebar navigation will persist across all pages.
+                    Welcome to our dashboard, try the new Chat Interface!
                 </AlertDescription>
             </Alert>
-
-            <Image
-                className="dark:invert"
-                src="/next.svg"
-                alt="Next.js logo"
-                width={180}
-                height={38}
-                priority
-            />
 
             <Button className="p-8" onClick={() => console.log('Dashboard button clicked')}>
                 DASHBOARD ACTION
             </Button>
-
-            <h3 className="px-12 text-green-500">Dashboard Content</h3>
 
             {/* Demo content to show the layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl">
