@@ -16,7 +16,18 @@ const nextConfig: NextConfig = {
 					// remoteA: `remoteA@${isProd ? 'https://cdn.company.com/remote-a' : 'http://localhost:3001'}/remoteEntry.js`,
 				},
 				exposes: {},
-				shared: {},
+				shared: {
+					// react: {
+					// 	singleton: true,
+					// 	strictVersion: true,
+					// 	requiredVersion: '19.1.0',
+					// },
+					// 'react-dom': {
+					// 	singleton: true,
+					// 	strictVersion: true,
+					// 	requiredVersion: '19.1.0',
+					// },
+				},
 				extraOptions: {
 					debug: true,
 					enableUrlLoaderFix: true,
@@ -24,9 +35,17 @@ const nextConfig: NextConfig = {
 				},
 			}),
 		);
+
+		// Ensure React is aliased correctly
+		// config.resolve.alias = {
+		// 	...config.resolve.alias,
+		// 	react: require.resolve('react'),
+		// 	'react-dom': require.resolve('react-dom'),
+		// };
 		return config;
 	},
-	transpilePackages: ['@react-ui/lib'],
+	transpilePackages: ['@repo/ui'],
+	experimental: {},
 };
 
 export default nextConfig;

@@ -1,32 +1,36 @@
 {
-	"extends": "@repo/ts-config/react.json",
+	"extends": "@repo/typescript-config/nextjs.json",
 	"compilerOptions": {
-		"target": "ES2020",
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"target": "es2022",
+		"lib": ["dom", "dom.iterable", "es6"],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
+		"forceConsistentCasingInFileNames": true,
 		"noEmit": true,
 		"esModuleInterop": true,
 		"module": "esnext",
-		"moduleResolution": "bundler",
+		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"incremental": true,
 		"paths": {
-			"@/*": ["./src/*"],
-			"@repo/react-ui/*": ["../../packages/react-ui/src/*"],
-			"@repo/react-ui": ["../../packages/react-ui/src"],
-			"@react-ui/*": ["../../packages/react-ui/src/*"]
-		}
+			"@/*": ["./src/*"]
+		},
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
 	},
 	"include": [
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"postcss.config.cjs",
-		"tailwind.config.js"
+		"next-env.d.ts",
+		"next.config.js",
+		".next/types/**/*.ts"
 	],
 	"exclude": ["node_modules"]
 }
